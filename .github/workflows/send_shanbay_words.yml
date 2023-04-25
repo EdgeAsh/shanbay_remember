@@ -40,6 +40,9 @@ jobs:
       - name: Run Script
         run: |
           node shanbay.js ${{ secrets.TELE_TOKEN }} ${{ secrets.TELE_CHAT_ID }} "${{ secrets.SHANBAY_COOKIE }}"
+      - name: list files in the repo
+        run: |
+          ls /home/runner/work/octo-repo/octo-repo
       - name: Check file existence
         id: check_files
         uses: andstor/file-existence-action@v2
